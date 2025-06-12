@@ -2,7 +2,7 @@
 
 ## 📌 Project Overview
 
-This project is a full-stack solution to analyze a batch of invoice PDF files against a given insurance policy document. It leverages **Gemini Flash**, **ChromaDB**, **Mistral 7B**, and **FastAPI** to create a Retrieval-Augmented Generation (RAG) pipeline. The final product is a public-facing API where users can upload invoice files and ask queries to validate them against policy rules.
+This project is a full-stack solution to analyze a batch of invoice PDF files against a given insurance policy document. It leverages **Gemini Flash**, **ChromaDB**, **Mistral 7B**, and **FastAPI** to create a Retrieval-Augmented Generation (RAG) pipeline.This project implements a Retrieval-Augmented Generation (RAG) chatbot to answer questions related to invoice reimbursements. It uses semantic search using ChromaDB and SentenceTransformers, and generates natural language answers using transformerbased LLMs, including Flan-T5 and Mistral 7B.
 
 ---
 
