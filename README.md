@@ -1,7 +1,5 @@
 # Invoice-Reimbursement-System
 
-# 🧾 Invoice–Policy Compliance Analyzer using RAG & FastAPI
-
 ## 📌 Project Overview
 
 This project is a full-stack solution to analyze a batch of invoice PDF files against a given insurance policy document. It leverages **Gemini Flash**, **ChromaDB**, **Mistral 7B**, and **FastAPI** to create a Retrieval-Augmented Generation (RAG) pipeline. The final product is a public-facing API where users can upload invoice files and ask queries to validate them against policy rules.
@@ -14,7 +12,6 @@ This project is a full-stack solution to analyze a batch of invoice PDF files ag
 - `PyMuPDF (fitz)` – for reading and parsing PDF content.
 - `Gemini Flash API` – for quick and intelligent invoice-to-policy comparison.
 - `Threading` – to parallelize and accelerate the analysis of multiple invoices.
-- `Regular Expressions`, `String Cleaning` – to clean and prepare raw invoice text.
 
 ### 📌 Description:
 - The policy PDF is parsed and cleaned for semantic clarity.
