@@ -69,7 +69,7 @@ Formatted them into a prompt.
 
 Passed to local Flan-T5-base model to generate answers.
 
-example:
+Example:
 qa_pipeline = pipeline("text2text-generation", model="google/flan-t5-base")
 query = "Why was Rahul's cab reimbursement partially rejected?"
 answer = rag_chatbot_local(query)
