@@ -35,7 +35,51 @@ This project is a full-stack solution to analyze a batch of invoice PDF files ag
 
 ---
 
-## ✅ Phase 3: FastAPI Public API Deployment
+✅ Phase 3: Conversational Query Engine
+
+🎯 Objective
+
+Developed a local Conversational Query System that allows users to interact with invoice reimbursement data using natural language questions. The system returns context-aware, policy-aligned answers by combining vector similarity search and Retrieval-Augmented Generation (RAG).
+
+🧰 Tools & Libraries Used
+
+ChromaDB: Lightweight, local vector database for similarity search.
+
+Sentence-Transformers: Used for embedding invoice and analysis data (all-MiniLM-L6-v2).
+
+Hugging Face Transformers: Deployed google/flan-t5-base for fast, offline text generation.
+
+🧩 Key Components
+
+3.1 Embedding Generation & Storage
+
+Generated embeddings using the all-MiniLM-L6-v2 model.
+
+Stored documents in ChromaDB under a collection named invoice_embeddings.
+
+3.2 Semantic Search Function
+Searches invoice documents based on user query with optional metadata filtering (e.g., only retrieve documents for a certain employee or status).
+
+3.3 Local RAG Pipeline
+Integrates retrieved invoice documents into a context-aware prompt and uses a local LLM (flant5-base) to answer questions. 
+
+Retrieved top-k relevant invoices.
+
+Formatted them into a prompt.
+
+Passed to local Flan-T5-base model to generate answers.
+
+example:
+qa_pipeline = pipeline("text2text-generation", model="google/flan-t5-base")
+query = "Why was Rahul's cab reimbursement partially rejected?"
+answer = rag_chatbot_local(query)
+
+✅ Example Output:
+
+Rahul's cab reimbursement was partially rejected because it exceeded the policy cap for airport drops. The approved limit was ₹600, but the submitted invoice was ₹1200.
+
+
+## ✅ Phase 4: FastAPI Public API Deployment
 
 ### 🔧 Tools & Technologies:
 - `FastAPI` – to define RESTful endpoints for uploading files and querying documents.
